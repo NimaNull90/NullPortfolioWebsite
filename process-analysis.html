@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/main.css" rel="stylesheet">
+    <title>Nima Bagheri - Process Analysis</title>
+</head>
+
+<body>
+    <nav class="swoop-in" aria-label="Main navigation">
+        <a href="index.html" class="nav-brand">Nima Bagheri</a>
+        <div class="nav-links">
+            <a href="bio.html" class="nav-link">Full Bio</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="citations.html" class="nav-link">Citations</a>
+        </div>
+    </nav>
+
+    <header class="swoop-in">
+        <h1>Process Analysis</h1>
+        <p>Deep dive into my animation workflow</p>
+    </header>
+
+    <main>
+        <section id="process-analysis" class="swoop-in">
+            <h2>IAT343 Animated Film Project</h2>
+
+            <div class="process-step">
+                <img src="img/sketchToStartModel.png" alt="Sketch of a cat and a greyed out cat model"
+                    class="process-image" width="300" height="200">
+                <div class="process-text">
+                    <h3>Initial Concept & Research</h3>
+                    <p>This was the final project of IAT343 and was done in a group of 5 using mainly the Autodesk Maya
+                        software. The project itself was about creating a short story along with a short 3D animated
+                        film for it. Our story revolves around a cat who lives off of stealing mail from other people
+                        before turning a new leaf after seeing the consequences of his own actions. I ended up taking
+                        multiple roles in the production pipeline, but my highlight role for this project was being the
+                        lead technical animator which involved aspects such as rigging, UV editing and ensuring that the
+                        models work as intended.</p>
+
+                    <p>In the initial sketches, the drawings I made were simple, but sufficient for me to learn how cats
+                        move in real life, allowing me to start with rigging the character in order to capture how cats
+                        move in real life, at least based on the limited skills I had at the time.</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <img src="img/catSkeleton.png" alt="Cat model with red rig skeletons" class="process-image" width="300"
+                    height="250">
+                <div class="process-text">
+                    <h3>Character Rigging</h3>
+                    <p>After the cat's model was finished, I adjusted the bone placements to make the rig fit better
+                        with the model. During the production, I learned that Maya's Quick Rig feature was ineffective
+                        for non-humanoid models and I ended up having to take a more manual approach. Regardless of
+                        those limitations, I was content with the results.</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="dual-images">
+                    <img src="img/catWeightPaint.png" alt="Cat model with weight painting interface"
+                        class="process-image" width="300" height="220">
+                    <img src="img/weightPainting_UI.png" alt="weight painting interface with bone options"
+                        class="process-image" width="250" height="190">
+                </div>
+                <div class="process-text">
+                    <h3>Weight Painting</h3>
+                    <p>The weight painting process involved determining how much of the mesh is affected by each bone.
+                        Given the amount of bones on the cat, I ended up painting a certain weight on each bone. This
+                        process was crucial for ensuring natural deformation of the character during animation.</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="dual-images">
+                    <img src="img/catRigControllers.png" alt="Cat model with rig controllers of colorful shapes"
+                        class="process-image" width="300" height="200">
+                    <img src="img/layerInterface.png" alt="Maya interface with layers and rig controllers"
+                        class="process-image" width="250" height="180">
+                </div>
+                <div class="process-text">
+                    <h3>Animation Controllers</h3>
+                    <p>To make the animating process easier, I ended up adding inverse kinematics (IK) handles and
+                        animation controllers to the rigs for making bone selection much easier. These colorful
+                        controllers provided intuitive ways for animators to pose and animate the character.</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <img src="img/catTextureUv.png" alt="A Burgundy UV map with multiple expressions and UV shells on top"
+                    class="process-image" width="300" height="240">
+                <div class="process-text">
+                    <h3>Facial Expression System</h3>
+                    <p>One challenging aspect of the animation was the facial rigs. Because the characters had no mouths
+                        on their models, their textures included various facial expressions, having made the animation
+                        hard to achieve.</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="dual-images">
+                    <img src="img/catExpressionTest_1.png" alt="Cat happy expression with control panel"
+                        class="process-image" width="250" height="180">
+                    <img src="img/catExpressionTest_2.png" alt="Cat sad expression with control panel"
+                        class="process-image" width="250" height="180">
+                </div>
+                <div class="process-text">
+                    <h3>Expression Implementation</h3>
+                    <p>I managed to fix that problem by making the UV shells of the models to be able to be keyframed,
+                        allowing the animators to switch between the facial expressions with ease. This innovative
+                        solution enabled seamless transitions between different emotional states.</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <img src="img/catControlRig.png" alt="Cat model with control rig in the scene" class="process-image"
+                    width="300" height="220">
+                <div class="process-text">
+                    <h3>Final Implementation</h3>
+                    <p>In the end, the technical animation was an integral process to the project. By optimizing the
+                        rigs efficiently, I helped streamlining the animation process for the team (and myself). By the
+                        end of the project, I learned more about the technical challenges of animation.</p>
+                </div>
+            </div>
+
+            <section class="supporting-artifacts">
+                <h3>Supporting Artifacts</h3>
+                <ul>
+                    <li>▶ Character rigging with wireframe controls and bone structure</li>
+                    <li>▶ Final 3D cat character model and poses</li>
+                    <li>▶ Weight painting interface and bone influence mapping</li>
+                    <li>▶ Character expression sheets and texture variations</li>
+                    <li>▶ Initial character sketches and design development</li>
+                    <li>▶ Helped the team by providing a straightforward method of texture swapping</li>
+                    <li>▶ IK handles and animation controller setup</li>
+                    <li>▶ Complete scene with rigged character in environment</li>
+                </ul>
+            </section>
+
+            <section class="final-video">
+                <h3>Final Animated Film</h3>
+                <p>Here is the complete animated film that resulted from this technical animation process:</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/Cfbf0Lvq6Bo"
+                        title="IAT343 Final Animated Film - Cat Animation Project by Nima Bagheri"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        aria-label="Watch the final animated film created through this technical animation process">
+                    </iframe>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="swoop-in">
+        <div class="footer-content">
+            <div class="footer-section">
+                <p>Animation Portfolio</p>
+                <p>&copy; 2025 - Nima Bagheri</p>
+            </div>
+            <div class="footer-section contact-info">
+                <h4>Contact Me</h4>
+                <p>Email:
+                    <a href="mailto:bagherinima80@gmail.com"
+                        aria-label="bagherinima80@gmail.com - Send email to Nima Bagheri">bagherinima80@gmail.com</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
