@@ -655,6 +655,36 @@ h3 {
     clip-path: polygon(0 0, calc(100% - 0.625rem) 0, 100% 0.625rem, 100% 100%, 0.625rem 100%, 0 calc(100% - 0.625rem));
 }
 
+.project-links {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #2c3e50;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+    border: 0.125rem solid #87ceeb;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-size: 0.875rem;
+    clip-path: polygon(0 0, calc(100% - 0.625rem) 0, 100% 0.625rem, 100% 100%, 0.625rem 100%, 0 calc(100% - 0.625rem));
+    box-shadow: 0 0.125rem 0.5rem rgba(135, 206, 235, 0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-links:hover {
+    background: linear-gradient(135deg, #87ceeb 0%, #add8e6 100%);
+    color: white;
+    transform: translateY(-0.125rem);
+    box-shadow: 
+        0 0.375rem 0.75rem rgba(135, 206, 235, 0.4),
+        0 0 1.25rem rgba(173, 216, 230, 0.3);
+    border-color: #add8e6;
+}
+
 .dual-images {
     display: flex;
     flex-direction: column;
