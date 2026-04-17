@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/main.css" rel="stylesheet">
+    <title>Projects</title>
+</head>
+
+<body>
+    <nav class="swoop-in" aria-label="Main navigation">
+        <a href="index.html" class="nav-brand">Nima Bagheri</a>
+        <div class="nav-links">
+            <a href="bio.html" class="nav-link">Full Bio</a>
+            <a href="process-analysis.html" class="nav-link">Process Analysis</a>
+            <a href="citations.html" class="nav-link">Citations</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="detailed-contribution" class="swoop-in">
+            <h2>Detailed Contributions</h2>
+            <div class="gallery">
+                <div class="work-item swoop-in">
+                    <img src="img/arcaneRedemption/WimzardAnims.gif" alt="Maguso character animations"
+                        class="work-image" loading="lazy">
+                    <h3>Maguso</h3>
+                    <p>Full animations for Maguso, the playable character of Arcane Redemption.</p>
+                </div>
+                <div class="work-item swoop-in">
+                    <img src="img/arcaneRedemption/SkarAnims.gif" alt="Skar character animations" class="work-image"
+                        loading="lazy">
+                    <h3>Skar</h3>
+                    <p>Full animations for Skar, the final boss of Arcane Redemption.</p>
+                </div>
+                <div class="work-item swoop-in">
+                    <img src="img/arcaneRedemption/TreeBossAnims.gif" alt="Tree boss animations" class="work-image"
+                        loading="lazy">
+                    <h3>Tree Boss</h3>
+                    <p>Full animations for Flandrik, the boss encountered in the town, and the first boss of the game.
+                    </p>
+                </div>
+                <div class="work-item swoop-in">
+                    <img src="img/arcaneRedemption/VolcanoBossAnims.gif" alt="Volcano boss animations"
+                        class="work-image" loading="lazy">
+                    <h3>Volcano Boss</h3>
+                    <p>Full animations for Vaxel, the boss encountered in the volcano biome.</p>
+                </div>
+                <div class="work-item swoop-in">
+                    <img src="img/arcaneRedemption/WaterBossAnims.gif" alt="Water boss animations" class="work-image"
+                        loading="lazy">
+                    <h3>Water Boss</h3>
+                    <p>Full animations Skogmast, the boss encountered in the bay biome.</p>
+                </div>
+                <div class="work-item swoop-in">
+                    <img src="img/arcaneRedemption/MayorAnims.gif" alt="Mayor character animations" class="work-image"
+                        loading="lazy">
+                    <h3>Mayor</h3>
+                    <p>NPC animations for the Mayor (shared across all NPCs).</p>
+                </div>
+                <div class="work-item swoop-in">
+                    <img src="img/arcaneRedemption/NPCAnims.gif" alt="3D models of the main character and final boss"
+                        class="work-image" loading="lazy">
+                    <h3>Scared NPC</h3>
+                    <p>Extra animations for NPCs in the game (shared across all NPCs).</p>
+                </div>
+                <div class="work-item swoop-in">
+                    <img src="img/arcaneRedemption/PlantEnemyAnims.gif" alt="Plant enemy animations" class="work-image"
+                        loading="lazy">
+                    <h3>Plant Enemy</h3>
+                    <p>Full animations for the plant enemies found in the fire dungeon.</p>
+                </div>
+                <div class="work-item swoop-in">
+                    <img src="img/arcaneRedemption/WaterEnemyAnims.gif" alt="Water enemy animations" class="work-image"
+                        loading="lazy">
+                    <h3>Water Enemy</h3>
+                    <p>Full animations for the water enemies found in the plant dungeon.</p>
+                </div>
+                <div class="work-item swoop-in">
+                    <img src="img/arcaneRedemption/FireEnemyAnims.gif" alt="Fire enemy animations" class="work-image"
+                        loading="lazy">
+                    <h3>Fire Enemy</h3>
+                    <p>Full animations for the fire enemies found in the water dungeon.</p>
+                </div>
+                <div class="work-item swoop-in">
+                    <img src="img/arcaneRedemption/FlyingFireEnemyAnims.gif" alt="Flying fire enemy animations"
+                        class="work-image" loading="lazy">
+                    <h3>Flying Fire Enemy</h3>
+                    <p>Full animations for the flying fire enemies found in the volcano biome (shared across all flying
+                        enemy variants).</p>
+                </div>
+                <div class="work-item swoop-in">
+                    <img src="img/arcaneRedemption/FlowerAllAnims.gif" alt="Flower puzzle key animations"
+                        class="work-image" loading="lazy">
+                    <h3>Flower</h3>
+                    <p>Full animations for the interactible flowers found in the plant dungeon.</p>
+                </div>
+            </div>
+            <div class="contribution-actions">
+            <div class="project-links">
+                <a href="https://kretaceousking.itch.io/arcane-redemption" class="project-link"
+                    aria-label="Download Arcane Redemption on Itch.io">Play the Game</a>
+            </div>
+            <div>
+                <a href="projects.html" class="nav-link">See More Projects</a>
+            </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+<footer class="swoop-in">
+    <div class="footer-content">
+        <div class="footer-section">
+            <p>Animation Portfolio</p>
+            <p>&copy; 2025 - Nima Bagheri</p>
+        </div>
+        <div class="footer-section contact-info">
+            <h4>Contact Me</h4>
+            <p>Email:
+                <a href="mailto:bagherinima80@gmail.com"
+                    aria-label="bagherinima80@gmail.com - Send email to Nima Bagheri">bagherinima80@gmail.com</a>
+            </p>
+        </div>
+    </div>
+</footer>
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const img = entry.target;
+            if (entry.isIntersecting) {
+                // Restore the real src from data-src
+                if (img.dataset.src) img.src = img.dataset.src;
+            } else {
+                // Clear src to stop rendering, save real path first
+                if (!img.dataset.src) img.dataset.src = img.src;
+                img.src = '';
+            }
+        });
+    }, { rootMargin: '200px' }); // 200px head-start before entering view
+
+    document.querySelectorAll('img[src$=".gif"]').forEach(img => {
+        observer.observe(img);
+    });
+</script>
+
+</html>

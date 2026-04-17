@@ -175,7 +175,7 @@ nav {
     overflow: hidden;
     clip-path: polygon(0 0, calc(100% - 0.625rem) 0, 100% 0.625rem, 100% 100%, 0.625rem 100%, 0 calc(100% - 0.625rem));
     box-shadow: 0 0.125rem 0.5rem rgba(135, 206, 235, 0.2);
-}
+    }
 
 .nav-link:hover {
     background: linear-gradient(135deg, #87ceeb 0%, #add8e6 100%);
@@ -567,6 +567,64 @@ h3 {
     box-shadow: 0 0 1.25rem rgba(135, 206, 235, 0.3);
 }
 
+/* Detailed Contribution Section - Evenly sized images */
+#detailed-contribution .work-image {
+    width: 18.75rem;
+    height: 12.5rem;
+    object-fit: cover;
+}
+
+#detailed-contribution .contribution-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 2rem auto 0;
+    max-width: 40rem;
+}
+
+#detailed-contribution .contribution-actions button,
+#detailed-contribution .contribution-actions a {
+    flex: 1 1 12rem;
+    min-width: 12rem;
+    padding: 0.95rem 1.25rem;
+    border: 0.125rem solid #87ceeb;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(135, 206, 235, 0.2);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+#detailed-contribution .contribution-actions button:hover,
+#detailed-contribution .contribution-actions a:hover {
+    background: linear-gradient(135deg, #87ceeb 0%, #add8e6 100%);
+    color: #ffffff;
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.35rem 0.75rem rgba(135, 206, 235, 0.35);
+}
+
+/* Animation delays for detailed contribution items */
+#detailed-contribution .work-item.swoop-in:nth-child(1) { animation-delay: 1.6s; }
+#detailed-contribution .work-item.swoop-in:nth-child(2) { animation-delay: 1.7s; }
+#detailed-contribution .work-item.swoop-in:nth-child(3) { animation-delay: 1.8s; }
+#detailed-contribution .work-item.swoop-in:nth-child(4) { animation-delay: 1.9s; }
+#detailed-contribution .work-item.swoop-in:nth-child(5) { animation-delay: 2.0s; }
+#detailed-contribution .work-item.swoop-in:nth-child(6) { animation-delay: 2.1s; }
+
+main section {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 400px; /* rough estimated height */
+}
+
 .work-item h3 {
     color: #2c3e50;
     margin-bottom: 0.75rem;
@@ -656,26 +714,69 @@ h3 {
 }
 
 .project-links {
-    display: inline-block;
     margin-top: 1rem;
-    color: #2c3e50;
-    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-    text-decoration: none;
-    font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    transition: all 0.3s ease;
-    border: 0.125rem solid #87ceeb;
-    text-transform: uppercase;
-    letter-spacing: 0.05rem;
-    font-size: 0.875rem;
-    clip-path: polygon(0 0, calc(100% - 0.625rem) 0, 100% 0.625rem, 100% 100%, 0.625rem 100%, 0 calc(100% - 0.625rem));
-    box-shadow: 0 0.125rem 0.5rem rgba(135, 206, 235, 0.2);
-    display: inline-flex;
-    align-items: center;
+    display: flex;
     justify-content: center;
+    gap: 1rem;
 }
 
-.project-links:hover {
+#detailed-contribution .project-links {
+    margin-top: 0;
+}
+
+.project-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 0.125rem solid #87ceeb;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 0, calc(100% - 0.625rem) 0, 100% 0.625rem, 100% 100%, 0.625rem 100%, 0 calc(100% - 0.625rem));
+    box-shadow: 0 0.125rem 0.5rem rgba(135, 206, 235, 0.2);
+    flex: 1;
+}
+
+.project-link:hover {
+    background: linear-gradient(135deg, #87ceeb 0%, #add8e6 100%);
+    color: white;
+    transform: translateY(-0.125rem);
+    box-shadow: 
+        0 0.375rem 0.75rem rgba(135, 206, 235, 0.4),
+        0 0 1.25rem rgba(173, 216, 230, 0.3);
+    border-color: #add8e6;
+}
+
+.detailed-workflow {
+    margin-top: 1rem;
+    display: inline-flex;
+}
+
+.detailed-workflow-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 0.125rem solid #87ceeb;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 0, calc(100% - 0.625rem) 0, 100% 0.625rem, 100% 100%, 0.625rem 100%, 0 calc(100% - 0.625rem));
+    box-shadow: 0 0.125rem 0.5rem rgba(135, 206, 235, 0.2);
+}
+
+.detailed-workflow-link:hover {
     background: linear-gradient(135deg, #87ceeb 0%, #add8e6 100%);
     color: white;
     transform: translateY(-0.125rem);
