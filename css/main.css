@@ -549,6 +549,114 @@ h3 {
     clip-path: polygon(0 0, calc(100% - 0.5rem) 0, 100% 0.5rem, 100% 100%, 0.5rem 100%, 0 calc(100% - 0.5rem));
 }
 
+.gif-card {
+    position: relative;
+    display: inline-block;
+}
+
+.gif-card .work-image {
+    display: block;
+}
+
+.gif-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.75rem 1.25rem;
+    border: 0.125rem solid rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.64);
+    color: #ffffff;
+    font-size: 0.95rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.25s ease, opacity 0.25s ease, background 0.25s ease;
+    border-radius: 999px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+.gif-play-button:hover {
+    transform: translate(-50%, -50%) scale(1.03);
+    background: rgba(0, 0, 0, 0.78);
+}
+
+.gif-card.playing .gif-play-button {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.gif-card .work-image,
+.gif-card .gif-play-button {
+    cursor: pointer;
+}
+
+.gif-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.gif-modal.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.gif-modal::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.gif-modal-content {
+    position: relative;
+    max-width: min(90vw, 60rem);
+    max-height: min(90vh, 40rem);
+    width: 100%;
+    z-index: 1;
+}
+
+.gif-modal-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.75rem;
+    border: 0.25rem solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 2rem rgba(0,0,0,0.4);
+}
+
+.gif-modal-close {
+    position: absolute;
+    top: -0.75rem;
+    right: -0.75rem;
+    z-index: 2;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.88);
+    color: #1a1a1a;
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.25);
+}
+
+.gif-modal-close:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
 /* Specific image dimensions */
 .work-image[alt*="Orange character idle animation"] { width: 18.75rem; height: 12.5rem; }
 .work-image[alt*="Tentacle emerging"] { width: 18.75rem; height: 11.25rem; }
@@ -571,7 +679,7 @@ h3 {
 #detailed-contribution .work-image {
     width: 18.75rem;
     height: 12.5rem;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 #detailed-contribution .contribution-actions {
@@ -962,6 +1070,41 @@ footer {
     color: #87ceeb;
     /* Reduced glow effect */
     text-shadow: 0 0 0.2rem #87ceeb;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #add8e6;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.2s ease, border-color 0.25s ease;
+    font-size: 0.9rem;
+}
+
+.social-link svg {
+    width: 1rem;
+    height: 1rem;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+.social-link:hover {
+    color: #87ceeb;
+    border-color: rgba(135, 206, 235, 0.5);
+    transform: translateY(-0.05rem);
 }
 
 footer p {
