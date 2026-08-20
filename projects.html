@@ -21,8 +21,13 @@
     <main>
         <section id="work-examples" class="swoop-in">
             <h2>Projects I've Worked On</h2>
+            <div class="project-filters" role="group" aria-label="Filter projects by category">
+                <button type="button" class="project-filter is-active" data-filter="all" aria-pressed="true">All Projects</button>
+                <button type="button" class="project-filter" data-filter="videogame" aria-pressed="false">Video Games</button>
+                <button type="button" class="project-filter" data-filter="animatedfilm" aria-pressed="false">Animated Films</button>
+            </div>
             <div class="gallery">
-                <div class="work-item swoop-in">
+                <div class="work-item swoop-in" data-category="videogame">
                     <img src="img/ArcaneRedemption.png" alt="Wizard looking up holding a sword" class="work-image"
                         width="300" height="200">
                     <h3>Arcane Redemption</h3>
@@ -49,7 +54,7 @@
                             aria-label="Watch the Trailer for Arcane Redemption">Watch the Trailer</a>
                     </div>
                 </div>
-                <div class="work-item swoop-in">
+                <div class="work-item swoop-in" data-category="videogame">
                     <img src="img/lOOTW_MenuImg.png" alt="Two colored silhouettes with a floating character in middle"
                         class="work-image" width="300" height="200">
                     <h3>Love out of This World</h3>
@@ -74,7 +79,7 @@
                             aria-label="Watch the Trailer for Love Out of This World">Watch the Game Introduction</a>
                     </div>
                 </div>
-                <div class="work-item swoop-in">
+                <div class="work-item swoop-in" data-category="videogame">
                     <img src="img/zvezda13SCImg.png" alt="Pixel art of a man holding a gun next to a shadowy monster"
                         class="work-image" width="300" height="200">
                     <h3>Zvezda-13</h3>
@@ -98,7 +103,7 @@
                             aria-label="Watch the Trailer for Zvezda-13">Watch the Trailer</a>
                     </div>
                 </div>
-                <div class="work-item swoop-in">
+                <div class="work-item swoop-in" data-category="animatedfilm">
                     <img src="img/catWake.gif" alt="Burgundy cat waking up and looking at a blue cat" class="work-image"
                         width="300" height="200">
                     <h3>Mail Mischief</h3>
@@ -121,6 +126,7 @@
                 </div>
         </section>
     </main>
+    <script src="js/project-filters.js"></script>
     <footer class="swoop-in">
         <div class="footer-content">
             <div class="footer-section">
